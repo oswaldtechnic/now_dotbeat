@@ -28,5 +28,5 @@ main :: proc() {
 	time_since_midnight := (time.diff(midnight, now)) / time.Second
 	dotbeat := math.mod((f64(time_since_midnight) / 86.4), 1000)
 	_, this_month, today := time.date(now)
-	fmt.printf("\033[91md\033[0m%v.%v\n\033[91m@\033[0m%0.02f\n", today, this_month, dotbeat)
+	fmt.printf("\033[91md\033[0m%v.%v \033[91m@\033[0m%0.02f\n", today, this_month, dotbeat)
 }
